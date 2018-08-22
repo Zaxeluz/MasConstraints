@@ -1,25 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MasConstraints" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 ºC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwW-6l-j5j">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="81"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.97441211866013644" blue="0.88040041546405745" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hoot" translatesAutoresizingMaskIntoConstraints="NO" id="ga7-29-z9N">
+                                <rect key="frame" x="0.0" y="368" width="207" height="184"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Power" translatesAutoresizingMaskIntoConstraints="NO" id="Rex-53-ceG">
+                                <rect key="frame" x="207" y="368" width="207" height="184"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Copo" translatesAutoresizingMaskIntoConstraints="NO" id="DuK-Yg-uBV">
+                                <rect key="frame" x="207" y="552" width="207" height="184"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cold" translatesAutoresizingMaskIntoConstraints="NO" id="tFp-tZ-jEs">
+                                <rect key="frame" x="0.0" y="552" width="207" height="184"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84961214499750948" green="0.99470433103809364" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ga7-29-z9N" firstAttribute="top" secondItem="uwW-6l-j5j" secondAttribute="bottom" id="74J-c3-Stm"/>
+                            <constraint firstItem="uwW-6l-j5j" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="CcU-bR-Pi3"/>
+                            <constraint firstItem="DuK-Yg-uBV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="CiP-36-IjC"/>
+                            <constraint firstItem="DuK-Yg-uBV" firstAttribute="top" secondItem="Rex-53-ceG" secondAttribute="bottom" id="DPZ-mI-Y15"/>
+                            <constraint firstItem="tFp-tZ-jEs" firstAttribute="top" secondItem="ga7-29-z9N" secondAttribute="bottom" id="Fzn-s8-Cff"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rex-53-ceG" secondAttribute="trailing" constant="-20" id="Nue-A5-tfe"/>
+                            <constraint firstItem="tFp-tZ-jEs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="SC9-wl-Dr1"/>
+                            <constraint firstItem="uwW-6l-j5j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ZMM-II-uVh"/>
+                            <constraint firstItem="DuK-Yg-uBV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="aPP-z0-4sl"/>
+                            <constraint firstItem="ga7-29-z9N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="alY-Ip-xPU"/>
+                            <constraint firstItem="Rex-53-ceG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="ee2-cJ-fwn"/>
+                            <constraint firstItem="ga7-29-z9N" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="eid-gp-2U5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DuK-Yg-uBV" secondAttribute="bottom" id="ejl-Nr-ZXO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DuK-Yg-uBV" secondAttribute="trailing" constant="-20" id="fkp-hF-ZS5"/>
+                            <constraint firstItem="tFp-tZ-jEs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="ivW-cB-ArM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tFp-tZ-jEs" secondAttribute="bottom" id="kPa-yf-NBv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uwW-6l-j5j" secondAttribute="trailing" constant="-20" id="naR-oh-le9"/>
+                            <constraint firstItem="tFp-tZ-jEs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="p5H-fp-Sdr"/>
+                            <constraint firstItem="uwW-6l-j5j" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="u5n-gy-VZl"/>
+                            <constraint firstItem="Rex-53-ceG" firstAttribute="top" secondItem="uwW-6l-j5j" secondAttribute="bottom" id="xvU-ya-8rQ"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="430" y="426"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cold" width="980" height="980"/>
+        <image name="Copo" width="1000" height="1000"/>
+        <image name="Hoot" width="980" height="980"/>
+        <image name="Power" width="512" height="512"/>
+    </resources>
 </document>
